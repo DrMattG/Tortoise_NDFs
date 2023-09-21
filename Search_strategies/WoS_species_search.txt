@@ -1,0 +1,37 @@
+# Web of Science Search Strategy (v0.1)
+
+# Database: Web of Science Core Collection
+
+# Entitlements:
+
+- WOS.SCI: 1987 to 2023
+- WOS.AHCI: 1987 to 2023
+- WOS.ESCI: 2018 to 2023
+- WOS.SSCI: 1987 to 2023
+
+
+# Searches:
+
+1: TS=("Aldabrachelys gigantea" OR "Aldabrachelys elephantina" OR "Chelonoidis gigantea" OR "Dipsochelys abrupta" OR "Dipsochelys arnoldi" OR "Dipsochelys daudinii" OR "Dipsochelys dussumieri" OR "Dipsochelys elephantina" OR "Dipsochelys grandidieri" OR "Dipsochelys hololissa" OR "Geochelone arnoldi" OR "Geochelone dussumieri" OR "Geochelone gigantea" OR "Geochelone hololissa" OR "Testudo daudinii" OR "Testudo elephantina" OR "Testudo gigantea" OR "Testudo hololissa" OR "Aldabra Giant Tortoise")				Date Run: Wed Sep 20 2023 19:02:41 GMT+0200 (Central European Summer Time)		Results: 62
+
+2: TS=("Centrochelys sulcata" OR "Geochelone sulcata" OR "Testudo calcarata" OR "Testudo radiata senegalensis" OR "Testudo sulcata" OR "Grooved Tortoise" OR "African Spurred Tortoise")				Date Run: Wed Sep 20 2023 19:03:50 GMT+0200 (Central European Summer Time)		Results: 48
+
+3: TS=("Chelonoidis carbonarius" OR "Chelonoidis carbonaria" OR "Geochelone carbonaria" OR "Testudo boiei" OR "Testudo carbonaria" OR "Testudo hercules truncata" OR "Red-footed Tortoise" OR "Wood Tortoise")				Date Run: Wed Sep 20 2023 19:04:16 GMT+0200 (Central European Summer Time)		Results: 142
+
+4: TS=("Chelonoidis denticulatus" OR "Chelonoidis denticulata" OR "Geochelone denticulata" OR "Testudo cagado" OR "Testudo denticulata" OR "Testudo foveolata" OR "Testudo hercules" OR "Testudo planata" OR "Testudo sculpta" OR "Testudo tabulata" OR "Testudo terrestris americana" OR "Testudo tessellata" OR "Yellow-footed Tortoise" OR "South American Yellow-footed Tortoise" OR "South American Tortoise" OR "Forest Tortoise" OR "Brazilian Giant Tortoise")				Date Run: Wed Sep 20 2023 19:04:40 GMT+0200 (Central European Summer Time)		Results: 67
+
+5: TS=("Chersina angulata" OR "Testudo angulata" OR "Testudo bellii" OR "Testudo tabulata africana" OR "Angulate tortoise" OR "Bowsprit Tortoise" OR "South African Bowsprit Tortoise" OR "Angulated Tortoise")				Date Run: Wed Sep 20 2023 19:05:03 GMT+0200 (Central European Summer Time)		Results: 42
+
+6: TS=("Kinixys spekii" OR "Homopus darlingi" OR "Kinixys australis" OR "Kinixys jordani" OR "Kinixys youngi" OR "Testudo procterae" OR "Speke's Hinged Tortoise")				Date Run: Wed Sep 20 2023 19:05:26 GMT+0200 (Central European Summer Time)		Results: 25
+
+7: TS=("Manouria emys" OR "Geochelone emys" OR "Manouria fusca" OR "Teleopus luxatus" OR "Testudo emydoides" OR "Testudo emys" OR "Testudo falconeri" OR "Testudo nutapundi" OR "Testudo phayrei" OR "Burmese Brown Tortoise" OR "Black Giant Tortoise" OR "Six-legged Tortoise" OR "Asian Tortoise" OR "Asian Giant Tortoise" OR "Burmese Mountain Tortoise")				Date Run: Wed Sep 20 2023 19:05:44 GMT+0200 (Central European Summer Time)		Results: 17
+
+8: TS=("Stigmochelys pardalis" OR "Geochelone pardalis" OR "Testudo pardalis" OR "Mountain Tortoise" OR "Leopard Tortoise")				Date Run: Wed Sep 20 2023 19:06:01 GMT+0200 (Central European Summer Time)		Results: 122
+
+9: TS=("Testudo graeca" OR "Furculachelys nabeulensis" OR "Furculachelys whitei" OR "Testudo anamurensis" OR "Testudo antakyensis" OR "Testudo armeniaca" OR "Testudo cyrenaica" OR "Testudo flavominimaralis" OR "Testudo lamberti" OR "Testudo marokkensis" OR "Testudo mauritanica" OR "Testudo nabeulensis" OR "Testudo pallasi" OR "Testudo perses" OR "Testudo pusilla" OR "Testudo soussensis" OR "Testudo whitei" OR "Testudo zarudnyi" OR "Algerian Tortoise" OR "Mesopotamian Tortoise" OR "Moorish Tortoise" OR "Greek Tortoise" OR "Common Tortoise" OR "Spur-thighed Tortoise")				Date Run: Wed Sep 20 2023 19:06:15 GMT+0200 (Central European Summer Time)		Results: 364
+
+10: TS=("Testudo hermanni" OR "Testudo enriquesi" OR "Testudo graeca bettai" OR "Testudo graeca hercegovinensis" OR "Testudo hercegovinensis" OR "Testudo hermanni boettgeri" OR "Testudo hermanni hermanni" OR "Hermann's Tortoise")				Date Run: Wed Sep 20 2023 19:06:30 GMT+0200 (Central European Summer Time)		Results: 353
+
+11: TS=("Testudo horsfieldii" OR "Agrionemys horsfieldii" OR "Homopus burnesii" OR "Testudo baluchiorum" OR "Steppe Tortoise" OR "Central Asian Tortoise" OR "Horsfield's Tortoise" OR "Four-toed Tortoise" OR "Afghan Tortoise")				Date Run: Wed Sep 20 2023 19:06:46 GMT+0200 (Central European Summer Time)		Results: 50
+
+12: TS=("Testudo marginata" OR "Testudo campanulata" OR "Testudo graja" OR "Testudo nemoralis" OR "Testudo weissingeri" OR "Margined Tortoise" OR "Marginated Tortoise")				Date Run: Wed Sep 20 2023 19:07:05 GMT+0200 (Central European Summer Time)		Results: 60
