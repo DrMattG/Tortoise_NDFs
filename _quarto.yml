@@ -1,15 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+
 website:
   title: "VKM NDFs for Tortoises - R Documentation"
   navbar:
-    right:
+    left:
       - href: index.qmd
         text: Search strategy
       - Get_OA.qmd
-        
+      
 format:
   html:
-    theme: united
-    css: styles.css
+    theme:
+      light: [cosmo, style/dsbox.scss]
+      # dark: [cosmo, style/dsbox.scss, style/dark.scss]
     toc: true
-
+    code-copy: true
+    code-overflow: wrap
+    # mainfont: "Atkinson Hyperlegible"
+    # include-in-header: "style/fontawesome.html"
+        
 editor: visual
