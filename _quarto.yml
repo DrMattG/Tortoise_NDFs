@@ -4,9 +4,8 @@ website:
     right:
       - href: index.qmd
         text: Search strategy
-      - href: Get_OA.qmd
-        text: Download Open Access papers
-
+      - Get_OA.qmd
+        
 format:
   html:
     theme: united
