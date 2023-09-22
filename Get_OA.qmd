@@ -6,15 +6,15 @@ editor: visual
 
 Here is the R code for automating the extraction of pdf versions of publications for the review.
 
-```{r load libraries}
+```{r load libraries, message=FALSE, warning=FALSE}
 library(roadoi)
 library(rcrossref)
-library(tidyverse)
+library(tidyverse, quietly = TRUE)
 library(CiteSource)
 library(XML)
 ```
 
-```{r get citations}
+```{r get citations, message=FALSE, warning=FALSE}
 # use citesource to gather and deduplicate the
 files <- list.files(path = paste0(here::here(), "/Scoping_stage"), full.names = TRUE)
 labels <- rep(c("lens", "WoS"), 12)
@@ -22,7 +22,7 @@ cites <- CiteSource::read_citations(files = files, cite_labels = labels)
 unique_citations <- CiteSource::dedup_citations(cites)
 ```
 
-```{r open access}
+```{r open access, message=FALSE, warning=FALSE}
 my_dois <- c(unique_citations$doi)
 
 ```
@@ -37,7 +37,7 @@ my_dois_oa <- roadoi::oadoi_fetch(dois = my_dois, email = "matthew.grainger@nina
 my_dois_oa<-readRDS("data/my_dois_oa.RDS")
 ```
 
-```{r plot oa}
+```{r plot oa, message=FALSE, warning=FALSE}
 colours <- c("#CD7F32", "red", "gold", "green", "brown")
 my_dois_oa |>
   group_by(oa_status) |>
@@ -49,7 +49,7 @@ my_dois_oa |>
 
 ```
 
-```{r look at open dois}
+```{r look at open dois, message=FALSE, warning=FALSE}
 my_dois_oa_open <- my_dois_oa %>%
   dplyr::filter(is_oa == TRUE)
 # print the data frame with best open access location unnested
