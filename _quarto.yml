@@ -1,18 +1,16 @@
-project:
-  type: website
-  output-dir: docs
-  
 website:
-  title: "R documentation for VKM NDFs for Tortoises"
+  title: "VKM NDFs for Tortoises - R Documentation"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Search strategy
       - href: Get_OA.qmd
-        text: Download OA article
+        text: Download Open Access papers
 
 format:
   html:
-    theme: cosmo
+    theme: united
     css: styles.css
     toc: true
+
+editor: visual
