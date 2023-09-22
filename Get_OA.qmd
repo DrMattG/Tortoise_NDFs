@@ -1,0 +1,82 @@
+---
+title: "Finding open access publications"
+format: html
+editor: visual
+---
+
+Here is the R code for automating the extraction of pdf versions of publications for the review.
+
+```{r load libraries}
+library(roadoi)
+library(rcrossref)
+library(tidyverse)
+library(CiteSource)
+library(XML)
+```
+
+```{r get citations}
+# use citesource to gather and deduplicate the
+files <- list.files(path = paste0(here::here(), "/Scoping_stage"), full.names = TRUE)
+labels <- rep(c("lens", "WoS"), 12)
+cites <- CiteSource::read_citations(files = files, cite_labels = labels)
+unique_citations <- CiteSource::dedup_citations(cites)
+```
+
+```{r open access}
+my_dois <- c(unique_citations$doi)
+
+```
+
+```{r get oa data, eval=FALSE}
+# use oadoi_fetch() to get Unpaywall data on those DOIs
+my_dois_oa <- roadoi::oadoi_fetch(dois = my_dois, email = "matthew.grainger@nina.no")
+
+```
+
+```{r, echo=FALSE}
+my_dois_oa<-readRDS("data/my_dois_oa.RDS")
+```
+
+```{r plot oa}
+colours <- c("#CD7F32", "red", "gold", "green", "brown")
+my_dois_oa |>
+  group_by(oa_status) |>
+  tally() |>
+  ggplot(aes(oa_status, n)) +
+  geom_histogram(stat = "identity", fill = colours) +
+  labs(x = "Open Access status", y = "Frequency") +
+  ggthemes::theme_base()
+
+```
+
+```{r look at open dois}
+my_dois_oa_open <- my_dois_oa %>%
+  dplyr::filter(is_oa == TRUE)
+# print the data frame with best open access location unnested
+oa_loc <- my_dois_oa_open %>%
+  tidyr::unnest(best_oa_location, names_repair = "universal")
+```
+
+```{r loop download, eval=FALSE}
+for (i in 1:(dim(oa_loc)[1])) {
+  tryCatch(
+    {
+      url <- (oa_loc$url_for_pdf[i])
+      url <- oa_loc$url[i]
+      download.file(url, paste0("pdfs/", oa_loc$title[i], ".pdf"), mode = "wb")
+    },
+    error = function(cond) {
+      message(paste("URL does not seem to exist:", url))
+      message("Here's the original error message:")
+      message(cond)
+      # Choose a return value in case of error
+      return(NA)
+    }
+  )
+}
+
+```
+
+*How many OA papers were retrieved in the above loop?*
+
+From `r dim(oa_loc)[1]` open access papers we could download `rlength(list.files("pdfs", pattern = "*.pdf"))` of them. The others will need to be downloaded manually or through a academic library service.
