@@ -9,6 +9,8 @@ website:
       - href: index.qmd
         text: Search strategy
       - Get_OA.qmd
+      - icon: github
+        href: https://github.com/DrMattG/Tortoise_NDFs
       
 format:
   html:
