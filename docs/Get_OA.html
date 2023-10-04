@@ -171,7 +171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use citesource to gather and deduplicate the</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>files <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="at">path =</span> <span class="fu">paste0</span>(here<span class="sc">::</span><span class="fu">here</span>(), <span class="st">"/Scoping_stage"</span>), <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"lens"</span>, <span class="st">"WoS"</span>), <span class="dv">12</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"lens"</span>, <span class="st">"WoS"</span>), <span class="dv">14</span>)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>cites <span class="ot">&lt;-</span> CiteSource<span class="sc">::</span><span class="fu">read_citations</span>(<span class="at">files =</span> files, <span class="at">cite_labels =</span> labels)</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>unique_citations <span class="ot">&lt;-</span> CiteSource<span class="sc">::</span><span class="fu">dedup_citations</span>(cites)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -221,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><em>How many OA papers were retrieved in the above loop?</em></p>
-<p>From 1025 open access papers we could download <code>rlength(list.files("pdfs", pattern = "*.pdf"))</code> of them. The others will need to be downloaded manually or through a academic library service.</p>
+<p>From 1025 open access papers we could download 526 of them. The others will need to be downloaded manually or through a academic library service.</p>
 
 
 

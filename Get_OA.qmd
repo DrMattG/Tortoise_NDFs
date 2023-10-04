@@ -17,7 +17,7 @@ library(XML)
 ```{r get citations, message=FALSE, warning=FALSE}
 # use citesource to gather and deduplicate the
 files <- list.files(path = paste0(here::here(), "/Scoping_stage"), full.names = TRUE)
-labels <- rep(c("lens", "WoS"), 12)
+labels <- rep(c("lens", "WoS"), 14)
 cites <- CiteSource::read_citations(files = files, cite_labels = labels)
 unique_citations <- CiteSource::dedup_citations(cites)
 ```
@@ -79,4 +79,4 @@ for (i in 1:(dim(oa_loc)[1])) {
 
 *How many OA papers were retrieved in the above loop?*
 
-From `r dim(oa_loc)[1]` open access papers we could download `rlength(list.files("pdfs", pattern = "*.pdf"))` of them. The others will need to be downloaded manually or through a academic library service.
+From `r dim(oa_loc)[1]` open access papers we could download `r length(list.files("pdfs", pattern = "*.pdf"))` of them. The others will need to be downloaded manually or through a academic library service.
